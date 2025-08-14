@@ -3,22 +3,25 @@ name = "realbasicvsr"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.8"
 dependencies = [
-    "openmim>=0.3.9",
-    "torch>=2.8.0",
-    "torchvision>=0.23.0",
+    "mmcv-full>=1.7.2",
+    "mmedit>=0.16.1",
+    "torch==2.1.0",
+    "torchvision>=0.16.0",
 ]
 
 [tool.uv.sources]
 torch = [
-    { index = "pytorch-cu128" },
+    { index = "pytorch-cu118" },
 ]
 torchvision = [
-    { index = "pytorch-cu128" },
+    { index = "pytorch-cu118" },
 ]
+mmcv-full = { url = "https://download.openmmlab.com/mmcv/dist/cu118/torch2.1.0/mmcv_full-1.7.2-cp38-cp38-manylinux1_x86_64.whl" }
 
 [[tool.uv.index]]
-name = "pytorch-cu128"
-url = "https://download.pytorch.org/whl/cu128"
+name = "pytorch-cu118"
+url = "https://download.pytorch.org/whl/cu118"
 explicit = true
+
